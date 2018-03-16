@@ -1,0 +1,67 @@
+﻿@using OkOceanFisheries.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+    <title>Sign in</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="Content/login.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="container">
+            <div class="card card-container">
+                <hr />
+                <h4 id="center">OK Ocean Fisheries Login</h4>
+                <br />
+                <form class="form-signin">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Username" })
+                        <i class="fa fa-user faIcon"></i>
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                        <i class="fa fa-lock faIcon"></i>
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Log in" class="log-btn" />
+                </form>
+                <p>
+                    @Html.ActionLink("Register as a new user", "Register")
+                </p>
+            </div>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @* Enable this once you have account confirmation enabled for password reset functionality
+            <p>
+                @Html.ActionLink("Forgot your password?", "ForgotPassword")
+            </p>*@
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

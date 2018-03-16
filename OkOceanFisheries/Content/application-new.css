@@ -1,0 +1,49 @@
+ .card label {
+        font-size: 15px !important;
+        color: grey !important;
+    }
+
+    #tabs li .ui-icon-close {
+        float: left;
+        margin: 0.4em 0.2em 0 0;
+        cursor: pointer;
+    }
+
+    #tabs2 li .ui-icon-close {
+        float: left;
+        margin: 0.4em 0.2em 0 0;
+        cursor: pointer;
+    }
+
+    p {
+        color: white !important;
+    }
+
+    body > div > div.main-panel > nav > div > div.navbar-header > p {
+        color: #777 !important;
+    }
+
+    body > div.wrapper > div.main-panel > footer > div > p {
+        color: #777 !important;
+    }
+    /*tab colour*/
+    .ui-widget-header {
+        border: none !important;
+        background: white !important;
+    }
+
+    #submitButton {
+        margin-bottom: 60px;
+        margin-top: 20px;
+        transition: all .2s ease-in-out; 
+    }
+
+     #submitButton:hover {
+        margin-bottom: 60px;
+        margin-top: 20px;
+        transform: scale(1.1); 
+    }
+
+    .form-control {
+        height: 32px;
+    }

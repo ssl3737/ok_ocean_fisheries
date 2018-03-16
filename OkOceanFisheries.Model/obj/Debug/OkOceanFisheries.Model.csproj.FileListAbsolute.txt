@@ -1,0 +1,15 @@
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\OkOceanFisheries.Model.dll.config
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\OkOceanFisheries.Model.dll
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\OkOceanFisheries.Model.pdb
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\EntityFramework.dll
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\EntityFramework.xml
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\obj\Debug\OkOceanFisheries.Model.csprojResolveAssemblyReference.cache
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\obj\Debug\OkOceanFisheries.Model.csproj.CoreCompileInputs.cache
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\obj\Debug\OkOceanFisheries.Model.dll
+C:\Users\sejong\Documents\Visual Studio 2017\Projects\OkOceanFisheries\OkOceanFisheries.Model\obj\Debug\OkOceanFisheries.Model.pdb

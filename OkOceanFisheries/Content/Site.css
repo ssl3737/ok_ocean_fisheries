@@ -1,0 +1,79 @@
+﻿body {
+    background: #d6d6d8;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse {
+    border-color: #4584C1;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: white;
+    }
+
+        .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+            color: #c8c7ec;
+            background-color: transparent;
+        }
+
+    .navbar-inverse .navbar-nav > li:hover, .navbar-inverse .navbar-nav > li:focus {
+        color: #c8c7ec;
+        background-color: transparent;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+        color: #c8c7ec;
+        background-color: transparent;
+    }
+
+body > div > div.main-panel > nav > div > div.collapse.navbar-collapse > ul > li > ul > li:nth-child(1):hover {
+    color: #1DC7EA !important;
+}
+
+/*sidebar submenu*/
+
+
+
+#mainmenu li:hover .submenu {
+    display: block;
+    max-height: 200px;
+}
+
+.submenu a {
+}
+
+    /* hover behaviour for links inside .submenu */
+    .submenu a:hover {
+        background-color: #666;
+    }
+
+/* this is the initial state of all submenus.
+we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+    overflow: hidden;
+    max-height: 0;
+    margin-left: 50px;
+    -webkit-transition: all 0.5s ease-out;
+}

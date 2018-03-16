@@ -1,0 +1,10 @@
+﻿enable-migrations -ContextProject OkOceanFisheries.Model -ContextTypeName OOFContext -MigrationsDirectory Migrations\OkOceanFisheriesMigrations
+add-migration -ConfigurationTypeName OkOceanFisheries.Migrations.OkOceanFisheriesMigrations.Configuration "InitialCreate" -IgnoreChanges
+update-database -ConfigurationTypeName OkOceanFisheries.Migrations.OkOceanFisheriesMigrations.Configuration -Verbose
+
+1. enable-Migrations 폴더 생성 파일 생성
+2. sql에 테이블 생성되는 과정
+3. configuration파일에 테스트 데이터가 들어가는 것
+enable-Migrations -ContextTypeName ApplicationDbContext –ContextProject OkOceanFisheries.Model -MigrationsDirectory Migrations\AccountMigrations
+add-migration -ConfigurationTypeName OkOceanFisheries.Migrations.AccountMigrations.Configuration "User Identities"
+update-database -ConfigurationTypeName OkOceanFisheries.Migrations.AccountMigrations.Configuration -Verbose

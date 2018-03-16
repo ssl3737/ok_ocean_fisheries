@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkOceanFisheries", "OkOceanFisheries\OkOceanFisheries.csproj", "{475949C1-383A-4430-BB26-48E1C38F5765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkOceanFisheries.Model", "OkOceanFisheries.Model\OkOceanFisheries.Model.csproj", "{E6748E69-A457-4594-96AE-69D74B8A36B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{475949C1-383A-4430-BB26-48E1C38F5765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475949C1-383A-4430-BB26-48E1C38F5765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475949C1-383A-4430-BB26-48E1C38F5765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475949C1-383A-4430-BB26-48E1C38F5765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6748E69-A457-4594-96AE-69D74B8A36B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6748E69-A457-4594-96AE-69D74B8A36B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6748E69-A457-4594-96AE-69D74B8A36B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6748E69-A457-4594-96AE-69D74B8A36B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D502F39-4BB8-4C88-B5E3-1E3E8EC2646A}
+	EndGlobalSection
+EndGlobal

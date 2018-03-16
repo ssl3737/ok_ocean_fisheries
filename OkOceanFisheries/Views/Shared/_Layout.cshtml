@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script src="/Scripts/jquery-1.12.4.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/respond.min.js"></script>
+    <script src="/Scripts/jquery.dataTables.js"></script>
+    <script src="/Scripts/dataTables.responsive.min.js"></script>
+    <script src="/Scripts/dataTables.buttons.min.js"></script>
+    <script src="/Scripts/buttons.colVis.min.js"></script>
+    <script src="/Scripts/light-bootstrap-dashboard.js"></script>
+    <script src="/Scripts/bootstrap-notify.js"></script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="/Scripts/jquery-ui-1.12.1.js"></script>
+    @*<script src="/Scripts/moment.js"></script>*@
+    @*<script src="/Scripts/bootstrap-datetimepicker.js"></script>*@
+    @*<script src="/Scripts/jquery.validate.js"></script>*@
+    @*<script src="/Scripts/jquery.validate.unobtrusive.js"></script>*@
+    @*<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>*@
+    @*<script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>*@
+    @*<script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>*@
+    @*<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js"></script>*@
+
+    <script src="/Scripts/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+    <link href="/Content/bootstrap.css" rel="stylesheet">
+    <link href="/Content/Site.css" rel="stylesheet">
+    <link href="/Content/light-bootstrap-dashboard.css" rel="stylesheet">
+    <link href="/Content/animate.min.css" rel="stylesheet">
+    <link href="/Content/jquery-ui-1.12.1.css" rel="stylesheet">
+    <link href="/Content/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="/Content/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="/Content/buttons.dataTables.min.css" rel="stylesheet">
+    <link href="/Content/font-awesome.min.css" rel="stylesheet">
+    @*<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet">*@
+    @*<link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">*@
+    @*<link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />*@
+    @*<link href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />*@
+    @*<link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />*@
+    @*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">*@
+
+</head>
+
+<body>
+    @if (Url.RequestContext.RouteData.Values["action"] != "Login")
+    {
+        <div class="wrapper">
+            <div class="sidebar" data-color="blue" data-image="/Content/images/main.jpg">
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a href="~/Home/Index"><img src="/Content/images/Logo.png" style="width:100%;height:auto;" /></a>
+                    </div>
+                    <ul class="nav" id="mainmenu">
+                        <li>@Html.ActionLink("OK Ocean Fisheries", "Index", "Home", new { area = "" })</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    @Html.ActionLink("Admin", "Index", "Admin", new { onclick = "javascript:return false;" })
+                                    <ul class="submenu">
+                                        <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                                        <li>@Html.ActionLink("LockOut", "LockOut", "Admin")</li>
+                                        <li>@Html.ActionLink("Edit", "Edit", "Admin")</li>
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="main-panel">
+                <nav class="navbar navbar-default navbar-fixed">
+                    <div class="container" style="border-bottom: 1px solid #ffffff;">
+                        <div class="navbar-header" style="margin-top:6px;">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                                <span class="icon-bar"></span>
+                            </button>
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("Index"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>Welcome @User.Identity.Name!</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("User"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>My Profile</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("List"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:5px;"><i class="fa fa-spinner" style="width:50px;"></i>My List</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("Details"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:5px;"><i class="fa fa-spinner" style="width:50px;"></i>Details</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("New"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:5px;"><i class="fa fa-spinner" style="width:50px;"></i>New Application</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("About"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>About</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("ChangePassword"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>Change Password</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("Municipality"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>Municipality</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("Appraiser"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>Appraiser</p> }
+                            @if (Url.RequestContext.RouteData.Values["action"].Equals("InsuranceAgent"))
+                            { <p class="navbar-brand" style="font-size:25px; margin-bottom:0px;"><i class="fa fa-spinner" style="width:50px;"></i>Insurance Agent</p> }
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            @Html.ActionLink("Hello " + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown hidden-sm hidden-xs">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-user"></i>
+                                        <b class="caret" style="margin-top: 10px;"></b>
+                                    </a>
+                                    <ul class="dropdown-menu" style="width: 210px;">
+                                        <li><a href="~/User/User" style="font-size: 17px; margin-top:10px;"><i class="fa fa-smile-o"></i> My Profile</a></li>
+                                        <li><a href="~/Manage/ChangePassword" style="font-size: 17px; margin-top:10px;"><i class="fa fa-lock"></i> Change Password</a></li>
+                                        <li style="margin-top:-5px;">@Html.Partial("_LoginPartial")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container body-content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        }
+        else
+        {
+        @RenderBody()
+        }
+</body>
+
+</html>
